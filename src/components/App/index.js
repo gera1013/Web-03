@@ -5,6 +5,7 @@ import EventList from '../EventList';
 import BabyDropdown from '../BabyDropdown';
 import AddEventForm from '../AddEventForm';
 
+// Se lee la url y se pasa como params a los componentes que necesiten leer de ellos
 const App = ({ match: {params} }) => (
   <div className="back">
     <div className="wrapper__">

@@ -5,7 +5,9 @@ import './styles.css';
 import * as actions from '../../actions/baby';
 import FilterLink from '../FilterLink'
 
+// Dummy component que recibe unicamente onSend como parametro
 const AddBabyForm = ({ onSend }) => {
+    // Se utiliza el useState para para los valores de los campos de entrada
     const [name, changeName] = useState('');
     const [lastName, changeLastName] = useState('');
     const [age, changeAge] = useState('');
@@ -44,6 +46,9 @@ const AddBabyForm = ({ onSend }) => {
     );
 }
 
+// Funcion connect para el dummy component, especifica el metodo onSend
+// onSend recibe la informacion de los campos para pasarla al dispatch
+// Dispatch recibe la informacion de los campos, crea un nuevo bebe y lo agrega al estado
 export default connect(
     undefined,
     dispatch => ({
@@ -52,7 +57,7 @@ export default connect(
                 dispatch(actions.addBaby(name, lastName, age));
             }
             else {
-                console.log("Incomplete")
+                alert("Debe llenar todos los campos")
             }
         }
     })

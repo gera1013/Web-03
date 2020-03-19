@@ -4,7 +4,8 @@ import omit from 'lodash/omit';
 
 import * as types from '../types/event';
 
-
+// El estado es un objeto
+// Las llaves son el ID del evento y el contenido los demas atributos
 const byId = (state = {}, action) => {
   switch (action.type) {
     case types.CREATE_EVENT: {
@@ -22,6 +23,8 @@ const byId = (state = {}, action) => {
   }
 };
 
+// El estado es un objeto
+// La llave es el ID de cada bebe y el contenido una lista con los IDs de los eventos pertenecientes a ese bebe
 const byBabyId = (state = {}, action) => {
   switch(action.type) {
     case types.CREATE_EVENT: {
@@ -50,6 +53,7 @@ const byBabyId = (state = {}, action) => {
   }
 }
 
+// Se combinan los reductores de ambos tipos
 const events = combineReducers({
     byId,
     byBabyId,
@@ -57,7 +61,7 @@ const events = combineReducers({
 
 export default events;
 
-
+// Selectores de informacion de eventos
 export const getBabyEvent = (state, id) => state.byId[id];
 export const getAllBabyEvents = (state, babyID) => state.byBabyId[babyID] === undefined ? '' : state.byBabyId[babyID].map(
   id => getBabyEvent(state, id));

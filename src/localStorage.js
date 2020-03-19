@@ -1,3 +1,6 @@
+// Se definen los metodos necesarios para guardar, eliminar y cargar estados dentro del almacenamiento interno del PC
+
+// Carga el estado guardado en los archivos internos de la computadora
 export const loadState = () => {
     try{
         const serializedState = localStorage.getItem('state');
@@ -10,6 +13,7 @@ export const loadState = () => {
     }
 };
 
+// Guarda el estado actual en el almacenamiento interno
 export const saveState = (state) => {
     try{
         const serializedState = JSON.stringify(state);
@@ -19,11 +23,12 @@ export const saveState = (state) => {
     }
 }
 
+// Metodo para eliminar el estado guardado anteriormente
 export const deleteState = (state) => {
     try{
         const serializedState = JSON.stringify(state);
         localStorage.removeItem('state', serializedState);
     } catch(err){
-        //error
+        //Catch error
     }
 }
