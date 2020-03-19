@@ -1,0 +1,73 @@
+.back {
+    /*FONDO REFERENCIADO DE https://uigradients.com/#Sky */
+    background: #076585;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #cae3eb, #076585);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #cae3eb, #076585); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.button {
+    background: #4d8ca1;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 9px #dfdfdf;
+    color: #f2fcff;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+    font-weight: 600;
+    margin: 0.5rem 0.25rem;
+    padding: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #076585
+}
+
+.button:active {
+  background-color: #076585;
+  box-shadow: 0 5px #dfdfdf;
+  transform: translateY(4px);
+}
+
+.header {
+    color: #076585;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.input {
+    align-self: center;
+    background: #dfdfdf;
+    border: none;
+    border-radius: 0.5rem;
+    color: #076585;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+    font-weight: 500;
+    margin: 0.7rem;
+    padding: 0.7rem;
+    text-align: center;
+    width: 80%;
+}
+
+.wrapper {
+    background: #f2fcff;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    left: 50%;
+    padding: 2rem 10rem 5rem 10rem;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wrapper a {
+    padding: 1.5rem 10rem;
+}

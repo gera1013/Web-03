@@ -1,0 +1,90 @@
+.container {
+    align-items: center;
+    background: #f2fcff ;
+    border-radius: 1rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 15rem;
+    margin: 2rem;
+    width: 40rem;
+}
+
+.divisor {
+    background: #e1e1e1;
+    width: 1px;
+    height: 90%;
+    transition: 0.75s;
+}
+
+.delete {
+    background: none;
+    border: none;
+    color: #8a989c;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    aspect-ratio: 1;
+    transform: translate(-30%, -330%);
+}
+
+.delete:hover {
+    color: red;
+}
+
+.side {
+    align-items: flex-end;
+    background: linear-gradient(270deg, #f2fcff 80%, #076585 10%);
+    -webkit-backdrop-clip: text;
+    border-radius: 1rem 0 0 1rem;
+    display: flex;
+    flex: 0.15  ;
+    font-size: large;
+    font-weight: 600;
+    height: inherit;
+    padding: 0rem 1.5rem;
+}
+
+.side::after {
+    background: linear-gradient(270deg, #076585 100%);
+    bottom: 0;
+    content: "";
+}
+
+.side, .side::after {
+    background-size: 500%;
+    background-position: 20%;
+    transition: 0.75s;
+}
+
+.container:hover > .side {
+    background-position: 0;
+}
+
+.container:hover > .divisor {
+    width: 0rem;
+}
+
+.event-info-container {
+    display: flex;
+    flex: 2.5;
+    flex-direction: column;
+    font-size: large;
+    height: inherit;
+}
+
+.event-info-container div {
+    color: #8a989c;
+    font-weight: 500;
+    margin: 1rem;
+}
+
+.event-info-container .event-date{
+    margin-top: 2rem;
+}
+
+.event-info-container span {
+    color: #566569;
+    font-weight: 650;
+}

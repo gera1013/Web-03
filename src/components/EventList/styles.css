@@ -1,0 +1,16 @@
+.list {
+    list-style: none;
+    margin-left: 10rem;
+    margin-top: 8rem;
+    width: 40%;
+}
+
+.default-message {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 5rem;
+    left: 30%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-53%, -50%);
+}
